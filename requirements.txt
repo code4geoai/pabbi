@@ -7,3 +7,6 @@ leafmap
 matplotlib
 numpy
 vega_datasets
+geemap
+pandas
+geopandas
