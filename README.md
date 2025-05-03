@@ -1,60 +1,33 @@
-### Introduction
-This report presents a concise analysis of a cluster of five **Mauzas** (revenue villages) in Tehsil Pabbi, District Nowshera, Khyber Pakhtunkhwa, Pakistan. The primary objective is to examine land use changes—specifically, the **conversion of agricultural land**—using both cadastral vector datasets and satellite imagery.
+# Pabbi Land Cover Analysis
+### Background:
+<div style="text-align: justify;">
+Pakistan's land administration originates from the land revenue system created in the 13th century for collecting taxes from peasants. Pakistan’s main land records, more accurately, the record of rights and the village/cadastral maps, are maintained at the village level by the provincial Board of Revenues (BoRs). The revenue records were built for agricultural areas; however, due to rapid land use change such as urbanization, they became de facto urban records. Therefore, revenue records for the large part, especially in peri-urban areas, do not reflect the actual situation on the ground having a negative impact on the overall land tenure security. Informality in property rights is widespread in Pakistan.
 
-The analysis utilizes the original **agricultural parcels (Khasras)** created during the land record digitization process. These parcels were overlaid with **median NDVI values** calculated for the period **January 1, 2024 to December 31, 2024**, derived from Sentinel-2 Harmonized satellite imagery. Based on this NDVI assessment, it is estimated that approximately **19%** of agricultural land has transitioned to non-agricultural use.
+The BoRs collect agricultural tax in Pakistan based upon agricultural land categorization, land holdership and production, and land status captured in the Record of Rights by the Patwaris . The BoRs also collect land and property transaction taxes and fees including withholding tax, mutation fees, stamp duties, registration fees, and capital value tax, which all relate to the registered property transaction prices and the valuations available with the BoRs. As the overall process is heavily relying on manual methods, the system is hampered by limited human resources, leading to significant delays and inaccuracies in land record change and valuation practices. Land type and value data is not up to date, and this impacts several streams of land-related revenues for the federal, provincial, and local governments. Agricultural tax revenue yields are comparatively low relative to the cost of collection, raising concerns of its long-term viability. 
 
----
+Focusing on Khyber Pakhtunkhwa (KP) province, only half of the territory has official land records, and these records, registers, and maps are not interlinked. Existing records, registers, and maps are often not interlinked, leading to frequent disputes and challenges in validating property rights, leading The Government of Khyber Pakhtunkhwa (GoKP) misses significant revenue flows annually due to lapses in land records and valuation. To tackle this situation, the GoKP plans to modernize and strengthen the revenue records, mapping, and property valuation systems, utilizing geospatial infrastructures and its technologies, directly lead to increased collection of the above taxes/fees collected by BoR.
 
-### Objectives
-1. Visualize the cadastral (vector) datasets of the five Mauzas on an interactive map.
-2. Display key land use types (e.g., agriculture, built-up areas, roads) in separate layers.
-3. Generate a median NDVI layer using **Sentinel-2 Harmonized (10m resolution)** imagery over a one-year period.
-4. Identify and visualize agricultural parcels with **median NDVI values between 0.3 and 0.7**, indicative of active cultivation.
-5. Quantify the reduction in agricultural land area in **Kanal**.
+In terms of geospatial infrastructure, the GoKP possesses good quality  large-scale mapping, but its agencies and local governments lack access to up-to-date and granular geospatial data for efficient urban development and resilience. Survey of Pakistan is the country’s national mapping and surveying organization with a mandate to provide official, topographic, and thematic mapping in the country and regulate geospatial information. Yet, it is focused on large scale topographic mapping. Provider and arrangements for detailed mapping are unclear and in practice urban development and resilience rely on ad hoc mapping financed with donor support.
 
----
-
-### Datasets
-
-- **Vector Data**  
-  The cadastral vector dataset was provided by [Mr. Aftab Ahmad](https://www.linkedin.com/in/aftab-ahmad-4316a463/), Deputy Director GIS, Board of Revenue (BOR), KP. It includes agricultural field boundaries (*Khasras*) categorized as follows:
-
-  | Land Use      | No. of Parcels | Area (Kanal, Approx.) |
-  |---------------|----------------|------------------------|
-  | Agriculture   | 5,795          | 32,729                 |
-  | Stream        | 302            | 822                    |
-  | Other         | 229            | 1,047                  |
-  | Road/Street   | 172            | 1,668                  |
-  | Graveyard     | 29             | 202                    |
-  | Built-Up      | 24             | 602                    |
-
-  > **Note:** This dataset is based on the manual land settlement records of 1926. Actual on-ground conditions may have changed since then.
-
-- **Satellite Imagery**  
-  - The study uses [Sentinel-2 Harmonized Surface Reflectance](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED) imagery, accessed via Google Earth Engine.
-  - Images were filtered by region (five Mauzas), date range (2024), and cloud coverage (<10%).
-  - A total of **135 images** were processed to compute NDVI values for the year 2024.
+In this context, the World Bank (WB) is carrying out a technical assistance (TA) on land administration modernization with the aim to improve the Government of Khyber Pakhtunkhwa's own revenue generation. The TA encompasses three distinct components: 
+1) Revenue, which entails a comprehensive review of land information, valuation, and taxation systems; 
+2) Public Asset Management, focusing on the efficient management of public land and building assets; and 
+3) Land and Geospatial, including a thorough examination of urban and rural land administration as well as the geospatial information framework. This assignment falls under the component
 
 ---
 
-### Tools and Libraries Used
-- **Google Earth Engine** – Satellite image processing and remote sensing analysis  
-- **geemap** – Interactive mapping and Earth Engine integration in Python  
-- **GeoPandas** – Spatial data manipulation in Python
+### Objectives:
+The primary objective of this assignment is to develop and pilot Artificial Intelligence and Machine Learning (AI-ML) based geospatial analysis models in selected agricultural areas in Khyber Pakhtunkhwa (KP). The aim is to demonstrate the models' effectiveness and potential contribution to enhancing the efficiency and accuracy of KP’s agriculture-related taxation practices. Each pilot model will be carefully developed to align with KP’s agricultural taxation framework and leverage the latest applicable technologies. Furthermore, the assignment will propose recommendations to improve precision and outline strategies for scaling the models for broader implementation.
+
 
 ---
 
-### Assumptions
-- Seasonal analysis (e.g., **Rabi** and **Kharif**) has not been performed. Instead, the study uses a one-year aggregated NDVI analysis to represent changes in agricultural land use.
+### GeoAI Models Analysis:
+Based on the feedback from Task 1, the Consultant will undertake activities to develop three (3) AI-ML geospatial analysis models in the selected area. This involves collaborating with Beneficiary’s relevant authorities to identify a representative pilot area with a size of 1-2 mouzas , for demonstration purposes. Three potential models will be as below, subject to change based on the Beneficiary’s needs and available datasets: 
 
----
+1. Crop type detection model: This model will identify and classify dominant crop types in each parcel in the pilot area with high accuracy utilizing the satellite imagery. This model will provide spatial distribution data of various crops, enabling better estimation of agricultural tax based on crop type. The outcomes will also aid in monitoring compliance with BoR’s crop-related records.
+2. Crop yield projection model: This model is expected estimate the potential yield of identified crops by analyzing historical data, weather patterns, and vegetation indices from satellite imagery. The results will include quantifiable yield predictions that can improve revenue forecasting for agricultural taxation. This model will also assist in identifying areas with significant discrepancies in reported versus projected yields.
+3. Land use change detection model: This model will analyze temporal satellite imagery to identify patterns of land use change within the pilot area, such as shifts between agricultural and non-agricultural uses. The expected results include detailed maps and datasets highlighting areas of change, enabling authorities to identifty unauthorized land conversions accordingly.
 
-### Findings
-- A total of **4,473 agricultural parcels** were identified with **median NDVI values below 0.3**, suggesting possible conversion to non-agricultural uses.
-- The total **agricultural area** has declined from **32,729 Kanal** to **26,359 Kanal**, indicating a **19% reduction** in cultivated land since the 1926 settlement.
-
----
-
-### Results
-![Result](https://github.com/code4geoai/gee/releases/download/0.3/Pabbi_Mauzas.Analysis.png)
-
+-----
+</div>

@@ -10,3 +10,4 @@ vega_datasets
 geemap
 pandas
 geopandas
+ee
