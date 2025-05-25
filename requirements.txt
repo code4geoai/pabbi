@@ -9,7 +9,9 @@ numpy
 vega_datasets
 
 # My packages
-geemap
 pandas
 geopandas
-ee
+
+ipywidgets>=8.0.0
+widgetsnbextension
+plotly
