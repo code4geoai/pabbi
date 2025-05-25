@@ -5,7 +5,7 @@ project:
   title: Land Cover Analysis Pabbi
   subtitle: Geospatial Analysis
   jupyter: true
-  kernel: webenv
+  #kernel: ipykernel
   # description:
   # keywords: []
   # authors: []
