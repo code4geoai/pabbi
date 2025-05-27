@@ -15,3 +15,6 @@ geopandas
 ipywidgets>=8.0.0
 widgetsnbextension
 plotly
+xarray
+rasterio
+localtileserver
