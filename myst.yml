@@ -6,7 +6,7 @@ project:
   title: Pabbi Land Cover Analysis 
   subtitle: Geospatial Analysis
   jupyter: true
-  # kernal
+    # kernal
   # description:
   # keywords: []
   authors: Hayat Khan
@@ -25,11 +25,12 @@ project:
 site:
   template: book-theme
   options:
-    # logo_text: Introduction to GIS Programming
+    #logo_text: Introduction to GIS Programming
     favicon: images/favicon.ico
     logo: images/logo.png
-  #  footer: images/logo.png
-    hide_footer_links: true
+    style: ./css/footer.css
+    parts: 
+      footer: footer.md 
    
   nav:
    # - title: Pabbi Land Cover Analysis
