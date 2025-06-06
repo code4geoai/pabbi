@@ -28,7 +28,7 @@ site:
     #logo_text: Introduction to GIS Programming
     favicon: images/favicon.ico
     logo: images/logo.png
-    style: ./css/footer.css
+    style: ./css/custom.css
     parts: 
       footer: footer.md 
    
