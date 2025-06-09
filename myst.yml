@@ -30,7 +30,7 @@ site:
     logo: images/logo.png
     style: ./css/custom.css
   parts: 
-      footer: footer.md 
+     # footer: footer.md 
    
   nav:
    # - title: Pabbi Land Cover Analysis
