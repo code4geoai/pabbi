@@ -17,4 +17,3 @@ widgetsnbextension
 plotly
 xarray
 rasterio
-localtileserver
