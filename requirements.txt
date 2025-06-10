@@ -17,3 +17,4 @@ widgetsnbextension
 plotly
 xarray
 rasterio
+s3fs
